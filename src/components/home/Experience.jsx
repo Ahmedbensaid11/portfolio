@@ -1,3 +1,5 @@
+// src/components/home/Experience.jsx
+import { useTranslation } from "react-i18next";
 import experience from "../../data/experience";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -9,9 +11,11 @@ function formatDate(value) {
 }
 
 export default function Experience() {
+  const { t } = useTranslation();
+
   return (
     <section id="experience" className="py-24">
-      <h2 className="text-3xl font-bold mb-12">Experience</h2>
+      <h2 className="text-3xl font-bold mb-12">{t("experience.title")}</h2>
 
       <div className="relative border-l border-[var(--border)] pl-8 space-y-12">
         {experience.map((job) => (

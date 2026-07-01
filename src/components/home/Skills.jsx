@@ -1,11 +1,14 @@
 import skillsData from "../../data/skills";
 import Card from "../ui/Card";
 import Badge from "../ui/Badge";
+import { useTranslation } from "react-i18next";
 
 export default function Skills() {
+      const { t } = useTranslation();
+
   return (
     <section id="skills" className="py-24">
-      <h2 className="text-3xl font-bold mb-12">Skills</h2>
+<h2 className="text-3xl font-bold mb-12">{t("skills.title")}</h2>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {skillsData.map((group) => (

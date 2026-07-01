@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import projects from "../../data/projects";
 import Card from "../ui/Card";
 import Badge from "../ui/Badge";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
+      const { t } = useTranslation();
+
   return (
     <section id="projects" className="py-24">
-      <h2 className="text-3xl font-bold mb-12">Projects</h2>
+<h2 className="text-3xl font-bold mb-12">{t("projects.title")}</h2>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
